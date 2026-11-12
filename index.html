@@ -26,7 +26,7 @@
         >
         <select 
           id="genreFilter" 
-          class="bg-slate-900 border border-slate-800 p-2 rounded text-sm "
+          class="bg-slate-900 border border-slate-800 p-2 rounded text-sm"
         >
           <option value="all">Tous</option>
           <option value="movie">Films</option>
@@ -34,7 +34,7 @@
         </select>
       </div>
 
-      <div id="moviesGrid" class="grid grid-cols-3 gap-4">
+      <div id="moviesGrid" class="grid grid-cols-4 gap-4">
         
       </div>
 
@@ -49,7 +49,13 @@
 
   </main>
 
-  
+  <div id="movieModal" class="fixed inset-0 bg-black/75 hidden flex items-center justify-center p-4 z-50">
+    <div class="bg-slate-900 border border-slate-800 rounded-xl p-6 max-w-lg w-full relative shadow-2xl">
+      <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl font-bold">&times;</button>
+      <div id="modalContent" class="space-y-4">
+      </div>
+    </div>
+  </div>
 
   <script type="module" src="./js/main.js"></script>
 </body>
