@@ -6,18 +6,17 @@
   <title>CinéTrack</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="p-4 md:p-6">
+<body class="p-6">
 
   <header class="flex justify-between items-center pb-4 border-b border-slate-800 mb-6">
     <h1 class="text-xl font-bold">Ciné<span class="text-red-600">Track</span></h1>
-    <a href="#" class="text-sm text-slate-300">Movies</a>
   </header>
 
   <main class="flex flex-col lg:flex-row gap-6">
 
     <div class="w-full lg:w-3/4">
 
-      <div class="flex flex-col sm:flex-row gap-3 mb-6">
+      <div class="flex flex-col md:flex-row gap-4 mb-6">
         <input 
           id="searchFilm" 
           type="search" 
@@ -26,7 +25,7 @@
         >
         <select 
           id="genreFilter" 
-          class="w-full sm:w-44 bg-slate-900 border border-slate-800 p-2 rounded text-sm"
+          class="bg-slate-900 border border-slate-800 p-2 rounded text-sm"
         >
           <option value="all">Tous</option>
           <option value="movie">Films</option>
@@ -34,13 +33,13 @@
         </select>
       </div>
 
-      <div id="moviesGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4"></div>
+      <div id="moviesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
 
-      <div id="pagination" class="flex flex-wrap justify-center gap-2 mt-6"></div>
+      <div id="pagination" class="flex justify-center gap-2 mt-6"></div>
 
     </div>
 
-    <aside class="w-full lg:w-1/4 bg-slate-900 p-4 rounded border border-slate-800 h-fit">
+    <aside class="w-full lg:w-1/4 bg-slate-900 p-4 rounded border border-slate-800">
       <h2 class="font-bold text-lg mb-4 border-b border-slate-800 pb-2">Favorites</h2>
       <div id="favoritesList" class="text-xs text-slate-400">
         <p>No favorites added yet.</p>
@@ -49,8 +48,8 @@
 
   </main>
 
-  <div id="movieModal" class="fixed inset-0 bg-black bg-opacity-75 hidden flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-800 rounded p-5 max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
+  <div id="movieModal" class="fixed inset-0 bg-black/75 hidden flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded p-6 max-w-lg w-full relative">
       <button id="closeModal" class="absolute top-3 right-4 text-slate-400 hover:text-white text-xl font-bold">&times;</button>
       <div id="modalContent"></div>
     </div>
